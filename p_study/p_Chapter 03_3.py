@@ -129,6 +129,19 @@ print(numbers)
 print(ranks)
 
 # List Comprehension
+# 리스트 안에 for문을 포함하는 리스트 내포(List comprehension)을 사용하면
+# 좀 더 편리하고 직관적인 프로그램을 만들 수 있다.
+#
+# 일반적인 표현식은 다음과 같다.
+# [표현식 for 항목 in 반복가능객체 if 조건문]
+#
+# 조금 복잡하지만 for문을 2개 이상 사용하는 것도 가능하다.
+# for문을 여러 개 사용할 때의 문법은 다음과 같다.
+# [표현식 for 항목1 in 반복가능객체1 if 조건문1
+#         for 항목2 in 반복가능객체2 if 조건문2
+#         ...
+#         for 항목n in 반복가능객체n if 조건문n]
+
 students = [Classes(rank, number) for rank in ranks for number in numbers]
 
 print(len(students))
