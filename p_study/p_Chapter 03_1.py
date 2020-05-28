@@ -83,7 +83,7 @@ class Fruit():
 s1 = Fruit('Orage', 7500)
 s2 = Fruit('Banana', 3000)
 
-# 일반적인 계산
+# [일반적인 계산]
 print(s1._price + s2._price)
 # (결과값)
 # 10500
