@@ -27,3 +27,5 @@
 <a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2003_3.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2003_3.py
 
 <h3>[Chapter4] 파이썬 시퀀스</h3>
+<h4> 1. Sequence(1) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2004_1.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2004_1.py
