@@ -1,5 +1,5 @@
 <h1>Python Study Log</h1>
-파이썬 공부 내용에 관한 링크 기록일지입니다.
+파이썬 심화내용에 관한 기록일지 입니다.
 
 <h3>[Chapter1] Start!</h3>
 <a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2001_2.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2001_2.py
