@@ -84,7 +84,7 @@ class Averager():
         return sum(self._series) / len(self._series)
 
 # 인스턴스 생성
-averager_cls = Averager()
+averager_cls = Averager() # 클로저 함수는 변수를 한번 거쳐야한다.
 
 # 누적
 
