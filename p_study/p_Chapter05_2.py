@@ -75,10 +75,10 @@ print(sum(range(51,101)))
 
 # 클래스 이용
 class Averager():
-    def __init__(self):
+    def __init__(self):    # __init__은 인스턴스 초기화 할때 사용.
         self._series = []
 
-    def __call__(self, v):
+    def __call__(self, v): # __call__은 인스턴스가 호출됐을때 실행된다.
         self._series.append(v)
         print('inner >> {} / {}'.format(self._series, len(self._series)))
         return sum(self._series) / len(self._series)
