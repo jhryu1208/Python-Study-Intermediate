@@ -61,3 +61,28 @@ from collections import abc
 # isinstance(obj, class_or_tuple, /)
 print(isinstance(t, abc.Iterable)) # True
 print(abc.Iterable) # <class 'collections.abc.Iterable'>
+
+print()
+print()
+
+# next
+class WordSplitter:
+    def __init__(self, text):
+        self._idx = 0
+        self._text = text.split(' ')
+
+    def __next__(self):
+        print('Called __next__')
+        try:
+            word = self._text[self._idx]
+        except IndexError:
+            raise StopIteration('Stopped Iteration.')
+        self._idx += 1
+        return word
+
+    def __repr__(self):
+        return 'WordSplitter(%s)' % (self._text)
+
+
+wi = WordSplitter('Do today what you could do tommorrow')
+print(wi)
