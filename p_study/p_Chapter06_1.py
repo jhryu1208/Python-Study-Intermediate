@@ -18,13 +18,13 @@ for c in t:
 # iterator는 next()함수로 데이터를 순차적으로 호출 할 수 있는 객체이다.
 # Iterator를 만드는 방법으로, iterable한 객체에 파이썬 내장함수 iter()를 사용해서 만든다.
 
-w = iter(t)
-print(dir(w)) # __Iter__, __next__
+# w = iter(t)
+# print(dir(w)) # __Iter__, __next__
 
-print(next(w)) # A
-print(next(w)) # B
-print(next(w)) # C
-print(next(w)) # D
+print(next(t)) # A
+# print(next(w)) # B
+# print(next(w)) # C
+# print(next(w)) # D
 # print(next(w)) # StopIteration
 
 # while 반복문의 조건을 True로 설정 -> 무한반복
@@ -54,7 +54,6 @@ print(hasattr(t, '__iter__')) # True
 # abc는 abstract base classes를 의미한다.
 from collections import abc
 # isinstace는 해당 값의 자료형을 확인하고, 일치하면 True, 그렇지 않으면 False를 반환한다.
-# 또는 입력으로 받은 인스턴스가 그 클래스의 인스턴스인지 판단.
 # __iter()__메서드를 구현하고 있다면 abc.Iterable 서브클래스로 판단.
 
 # ussage:
