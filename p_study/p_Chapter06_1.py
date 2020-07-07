@@ -18,13 +18,13 @@ for c in t:
 # iterator는 next()함수로 데이터를 순차적으로 호출 할 수 있는 객체이다.
 # Iterator를 만드는 방법으로, iterable한 객체에 파이썬 내장함수 iter()를 사용해서 만든다.
 
-# w = iter(t)
-# print(dir(w)) # __Iter__, __next__
+w = iter(t)
+print(dir(w)) # __Iter__, __next__
 
-print(next(t)) # A
-# print(next(w)) # B
-# print(next(w)) # C
-# print(next(w)) # D
+print(next(w)) # A
+print(next(w)) # B
+print(next(w)) # C
+print(next(w)) # D
 # print(next(w)) # StopIteration
 
 # while 반복문의 조건을 True로 설정 -> 무한반복
@@ -64,7 +64,7 @@ print(abc.Iterable) # <class 'collections.abc.Iterable'>
 print()
 print()
 
-# next
+# next패턴
 class WordSplitter:
     def __init__(self, text):
         self._idx = 0
@@ -85,3 +85,39 @@ class WordSplitter:
 
 wi = WordSplitter('Do today what you could do tommorrow')
 print(wi)
+print(next(wi))
+print(next(wi))
+print(next(wi))
+print(next(wi))
+print(next(wi))
+print(next(wi))
+print(next(wi))
+
+# Generator 패턴
+# 1. 지능형 리스트, 딕셔너리, 집합 -> 데이터 양 증가 후 메모리 사용량 증가 -> 제네레이터 사용 권장
+# 2. 단위 실행 가능한 코루틴(corotine) 구현과 연동
+# 3. 작은 메모리 조각 사용
+
+class WordSplitGenerator:
+    def __init__ (self, text):
+        self._text = text.split(' ')
+
+    def __iter__(self):
+        for word in self._text:
+            yield word #제네레이터
+        return
+
+    def __repr__(self):
+        return 'WordSplitGenerator(%s)' % (self._text)
+
+wg = WordSplitGenerator('Do today what you could do tommorrow')
+wt = iter(wg)
+
+print(wt,wg)
+print(next(wt))
+print(next(wt))
+print(next(wt))
+print(next(wt))
+print(next(wt))
+print(next(wt))
+print(next(wt))
