@@ -65,37 +65,58 @@ def main():
             print('Scheduled for {} : {}'.format(work, future))
             print()
 
-        result = wait(futures_list, timeout=7) # (****)wait의 옵션중 timeout을 이용하면, 어떤 업무가 지정된 시간안에 결과를 반환못하면, 그 업무를 실패한 것으로 간주하고 중단한다
+        # result = wait(futures_list, timeout=7) # (****)wait의 옵션중 timeout을 이용하면, 어떤 업무가 지정된 시간안에 결과를 반환못하면, 그 업무를 실패한 것으로 간주하고 중단한다
+        #
+        # # 성공
+        # print('Completed Tasks : ' + str(result.done))
+        #
+        # # 4 가지 업무 모두 성공했을 경우
+        #
+        # # Completed Tasks : {<Future at 0x22235dff408 state=finished returned int>,
+        # # <Future at 0x22235e50948 state=finished returned int>,
+        # # <Future at 0x22235e50848 state=finished returned int>,
+        # # <Future at 0x22235e50a08 state=finished returned int>}
+        #
+        # # 모두 state=finished 상태로 표시된다.
+        #
+        # # 1 가지 업무를 실패 했을 경우
+        #
+        # # Completed Tasks : {<Future at 0x26fce970908 state=finished returned int>,
+        # # <Future at 0x26fce91e448 state=finished returned int>,
+        # # <Future at 0x26fce970a08 state=finished returned int>}
+        #
+        # # 실패된 한가지의 일이 표시가 안된다.
+        #
+        #
+        # # 실패
+        # print('Pending ones after waiting for 7seconds : ' + str(result.not_done))
+        #
+        # # 실패된 결과 값 표시
+        # # Pending ones after waiting for 7seconds : {<Future at 0x1f3b6220b08 state=running>}
+        #
+        # # 결과값 출력
+        # print([future.result() for futur in result.done])
 
-        # 성공
-        print('Completed Tasks : ' + str(result.done))
+        # as_completed 결과 출력
+        for future in as_completed(futures_list):
+            result = future.result()
+            done = future.done()
+            cancelled = future.cancelled
 
-        # 4 가지 업무 모두 성공했을 경우
+            # future 결과 확인
+            print('Future Result : {}, Done : {}'.format(result,done))
+            print('Future Cancelled : {}'.format(cancelled))
 
-        # Completed Tasks : {<Future at 0x22235dff408 state=finished returned int>,
-        # <Future at 0x22235e50948 state=finished returned int>,
-        # <Future at 0x22235e50848 state=finished returned int>,
-        # <Future at 0x22235e50a08 state=finished returned int>}
+            # Future Result : 500000500000, Done : True
+            # Future Cancelled : <bound method Future.cancelled of <Future at 0x1b7420fe448 state=finished returned int>>
+            # Future Result : 50000005000000, Done : True
+            # Future Cancelled : <bound method Future.cancelled of <Future at 0x1b742150788 state=finished returned int>>
+            # Future Result : 5000000050000000, Done : True
+            # Future Cancelled : <bound method Future.cancelled of <Future at 0x1b742150888 state=finished returned int>>
+            # Future Result : 500000000500000000, Done : True
+            # Future Cancelled : <bound method Future.cancelled of <Future at 0x1b742150948 state=finished returned int>>
 
-        # 모두 state=finished 상태로 표시된다.
-
-        # 1 가지 업무를 실패 했을 경우
-
-        # Completed Tasks : {<Future at 0x26fce970908 state=finished returned int>,
-        # <Future at 0x26fce91e448 state=finished returned int>,
-        # <Future at 0x26fce970a08 state=finished returned int>}
-
-        # 실패된 한가지의 일이 표시가 안된다.
-
-
-        # 실패
-        print('Pending ones after waiting for 7seconds : ' + str(result.not_done))
-
-        # 실패된 결과 값 표시
-        # Pending ones after waiting for 7seconds : {<Future at 0x1f3b6220b08 state=running>}
-
-        # 결과값 출력
-        print([future.result() for futur in result.done])
+            # True -> 완료되었음, state=finished -> 캔슬된게 없음
 
     # 종료 시간
     end_tm = time.time() - start_tm
