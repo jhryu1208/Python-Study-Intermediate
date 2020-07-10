@@ -38,3 +38,42 @@
 
 <h4> 4. Sequence(4) </h4>
 <a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2004_4.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter%2004_4.py
+
+<h3>[Chapter 5] 파이썬 일급함수</h3>
+
+<h4> 1. 파이썬 함수 특징 </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_1.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_1.py
+
+<h4> 2. Closure(1) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_2.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_2.py
+
+<h4> 3. Closure(2) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_3.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_3.py
+
+<h4> 4. 데코레이터(Decorator) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_4.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter05_4.py
+
+<h3>[Chapter 6] 파이썬 병행성</h3>
+
+<h4> 1. 병행성 - 기본 </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_1.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_1.py
+
+<h4> 2. 병행성 - 제너레이터 </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_2.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_2.py
+
+<h4> 3. 병행성 - 코루틴, Yield </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_3.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_3.py
+
+<h4> 4. 병렬성 - Future(1) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_4.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_4.py
+
+<h4> 5. 파이썬 - Future(2) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_5.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter06_5.py
+
+<h3>[Chapter 7] AsyncIO </h3>
+
+<h4> 1. AsyncIO 멀티 스크래핑(1) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter07_1.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter07_1.py
+
+<h4> 2. AsyncIO 멀티 스크래핑(2) </h4>
+<a href = "https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter07_2.py">https://github.com/jhryu1208/Python-Study-Intermediate/blob/master/p_study/p_Chapter07_2.py
